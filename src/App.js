@@ -1,42 +1,51 @@
 import React, { useState } from 'react';
+import { Button } from 'primereact/button';
 
-// --- IMPORTAÇÕES DE ESTILO (A "ROUPA" DO PROJETO) ---
-// Trocamos para o tema 'indigo', que é elegante para artes
-import "primereact/resources/themes/lara-light-indigo/theme.css";     
-import "primereact/resources/primereact.min.css";                  
-import "primeicons/primeicons.css";                                
-import "/node_modules/primeflex/primeflex.css";                   
+import "primereact/resources/themes/lara-light-teal/theme.css"; 
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+import "/node_modules/primeflex/primeflex.css";
 
-import ProductList from './components/ProductList';
+import Storefront from './views/Storefront';
 import ProductForm from './components/ProductForm';
 
 function App() {
-  // Estado que guarda todos os nossos produtos de arte
   const [products, setProducts] = useState([]);
+  const [view, setView] = useState('loja'); 
 
-  // Função para adicionar um novo item (ex: uma nova aquarela) à lista
   const addProduct = (newProduct) => {
-    // Pegamos o novo e espalhamos os antigos logo depois
-    setProducts([newProduct, ...products]); 
+    setProducts([newProduct, ...products]);
+    setView('loja'); 
   };
 
   return (
-    <div className="bg-bluegray-50 min-h-screen p-3 md:p-5">
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <header className="text-center mb-6">
-          <h1 className="text-800 text-5xl font-bold mb-2">
-            <i className="pi pi-palette text-primary mr-3" style={{ fontSize: '2.5rem' }}></i>
-            Ateliê Aquarela
+    <div className="bg-bluegray-50 min-h-screen">
+      <header className="bg-teal-700 text-white p-4 shadow-3">
+        <div className="max-w-custom mx-auto flex justify-content-between align-items-center" style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          {/* 💡 ALTERE AQUI: O nome da sua loja e o ícone (ex: pi-shopping-cart, pi-camera) */}
+          <h1 className="m-0 text-xl md:text-2xl font-light tracking-wide cursor-pointer" onClick={() => setView('loja')}>
+            <i className="pi pi-palette mr-2"></i> ARTES & CORES
           </h1>
-          <p className="text-600">Sua vitrine de materiais artísticos e obras originais</p>
-        </header>
-        
-        {/* Componente para cadastrar novos itens */}
-        <ProductForm onAddProduct={addProduct} />
-        
-        {/* Componente que exibe a galeria de produtos */}
-        <ProductList products={products} setProducts={setProducts} />
-      </div>
+          
+          <Button 
+            label={view === 'loja' ? "Cadastrar Novo Item" : "Voltar para Galeria"} 
+            icon={view === 'loja' ? "pi pi-plus" : "pi pi-arrow-left"} 
+            className="p-button-sm p-button-info"
+            onClick={() => setView(view === 'loja' ? 'cadastro' : 'loja')}
+          />
+        </div>
+      </header>
+
+      <main className="p-4 md:p-6 mx-auto" style={{ maxWidth: '1100px', margin: '0 auto' }}>
+        {view === 'loja' ? (
+          <Storefront products={products} setProducts={setProducts} />
+        ) : (
+          <div className="fadein">
+            <h2 className="text-teal-900 mb-4">Novo Item no Acervo</h2>
+            <ProductForm onAddProduct={addProduct} />
+          </div>
+        )}
+      </main>
     </div>
   );
 }

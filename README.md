@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+🎨 Galeria Teal Aquarela - Mini Loja Fullstack
+📖 Sobre o Projeto
+Este projeto foi desenvolvido como parte do meu aprendizado em Desenvolvimento Web Fullstack. A ideia foi criar uma aplicação de vitrine virtual interativa para um ateliê de arte, focando na experiência do usuário (UX) e no consumo de dados externos.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A aplicação possui duas interfaces principais:
 
-## Available Scripts
+Vitrine (Loja): Onde os clientes podem visualizar as obras, ver detalhes em janelas modais e interagir com a galeria.
 
-In the project directory, you can run:
+Painel Administrativo: Uma área restrita para o lojista cadastrar novos produtos no estoque em tempo real.
 
-### `npm start`
+🛠️ Tecnologias Utilizadas
+React.js: Biblioteca principal para construção da interface.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+PrimeReact: Biblioteca de componentes de UI de alto nível para botões, cards e modais.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+PrimeFlex: Sistema de CSS baseado em utilitários para garantir que o site seja responsivo (funciona em celular e PC).
 
-### `npm test`
+Axios: Para realizar requisições HTTP e consumir a API de produtos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fake Store API: Utilizada como base de dados inicial para popular a loja.
 
-### `npm run build`
+🚀 Funcionalidades
+[x] Consumo de API: Busca automática de produtos ao carregar a página.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[x] Sistema de Detalhes: Uso de Dialog (modais) para exibir informações completas de cada obra sem mudar de página.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[x] Cadastro em Tempo Real: Formulário que utiliza o estado do React (useState) para adicionar novos itens instantaneamente à vitrine.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[x] Design Responsivo: Layout que se adapta a diferentes tamanhos de tela usando o sistema de grid do PrimeFlex.
 
-### `npm run eject`
+[x] Navegação de Estados: Alternância entre visão do cliente e visão do administrador.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📂 Estrutura de Arquivos
+Plaintext
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+src/
+ ├── components/
+ │    ├── ProductCard.js  # Card individual e Modal de detalhes
+ │    ├── ProductForm.js  # Formulário de cadastro de novos itens
+ │    └── ProductList.js  # Lógica de busca na API e mapeamento da lista
+ └── App.js               # Gestão de estados globais, navegação e estilo teal
+🔧 Como rodar o projeto
+Para clonar e rodar esta aplicação em sua máquina, você precisará do Git e Node.js instalados.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Bash
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Clone este repositório
+$ git clone https://github.com/seu-usuario/mini-loja-virtual
 
-## Learn More
+# Acesse a pasta do projeto
+$ cd mini-loja-virtual
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Instale as dependências
+$ npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Execute a aplicação
+$ npm start
+💡 Aprendizados
+Durante o desenvolvimento deste projeto, pude aprofundar meus conhecimentos em:
 
-### Code Splitting
+Hooks do React: Especialmente useState para dados dinâmicos e useEffect para controle de ciclos de vida.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Props: Passagem de funções e dados entre componentes pais e filhos.
 
-### Analyzing the Bundle Size
+Tratamento de Dados: Como transformar dados brutos de uma API para que se encaixem no tema e na necessidade do meu negócio (Nicho de Arte).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🎨 Inspiração do Tema
+Escolhi o tema de Aquarela e a cor Teal para transmitir uma sensação de calma, criatividade e sofisticação, fugindo dos layouts de e-commerce tradicionais.
