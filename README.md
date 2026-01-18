@@ -1,68 +1,66 @@
-🎨 Galeria Teal Aquarela - Mini Loja Fullstack
-📖 Sobre o Projeto
-Este projeto foi desenvolvido como parte do meu aprendizado em Desenvolvimento Web Fullstack. A ideia foi criar uma aplicação de vitrine virtual interativa para um ateliê de arte, focando na experiência do usuário (UX) e no consumo de dados externos.
+🎨 Galeria Ateliê Teal | Mini Loja Virtual
+Status do Projeto: 🚀 Concluído (Aula de Desenvolvimento Web Fullstack)
 
-A aplicação possui duas interfaces principais:
+📖 Descrição:
 
-Vitrine (Loja): Onde os clientes podem visualizar as obras, ver detalhes em janelas modais e interagir com a galeria.
+Este projeto é uma aplicação React moderna que simula uma galeria de arte online. O objetivo foi criar uma experiência fluida para o usuário, integrando o consumo de uma API externa com a funcionalidade de gerenciamento de inventário em tempo real.
 
-Painel Administrativo: Uma área restrita para o lojista cadastrar novos produtos no estoque em tempo real.
+🛠️ Tecnologias e Ferramentas:
 
-🛠️ Tecnologias Utilizadas
-React.js: Biblioteca principal para construção da interface.
+React JS: Biblioteca base para a construção da interface.
 
-PrimeReact: Biblioteca de componentes de UI de alto nível para botões, cards e modais.
+PrimeReact: Componentes profissionais (Cards, Diálogos, Botões).
 
-PrimeFlex: Sistema de CSS baseado em utilitários para garantir que o site seja responsivo (funciona em celular e PC).
+PrimeFlex: Sistema de grid responsivo para dispositivos móveis.
 
-Axios: Para realizar requisições HTTP e consumir a API de produtos.
+Axios: Cliente HTTP para busca de dados na Fake Store API.
 
-Fake Store API: Utilizada como base de dados inicial para popular a loja.
+Unsplash API: Utilizada para as imagens artísticas de alta qualidade.
 
-🚀 Funcionalidades
-[x] Consumo de API: Busca automática de produtos ao carregar a página.
+🌟 Funcionalidades Principais:
 
-[x] Sistema de Detalhes: Uso de Dialog (modais) para exibir informações completas de cada obra sem mudar de página.
+🛒 Vitrine Interativa
 
-[x] Cadastro em Tempo Real: Formulário que utiliza o estado do React (useState) para adicionar novos itens instantaneamente à vitrine.
+Uma página inicial elegante onde o cliente pode explorar as obras. Cada item possui um efeito de sombra ao passar o mouse.
 
-[x] Design Responsivo: Layout que se adapta a diferentes tamanhos de tela usando o sistema de grid do PrimeFlex.
+🔍 Detalhes do Produto
 
-[x] Navegação de Estados: Alternância entre visão do cliente e visão do administrador.
+Ao clicar em "Ver Detalhes", um componente Dialog (modal) é disparado, exibindo a descrição técnica da obra e uma imagem ampliada sem recarregar a página.
 
-📂 Estrutura de Arquivos
-Plaintext
+📝 Cadastro de Acervo
 
-src/
- ├── components/
- │    ├── ProductCard.js  # Card individual e Modal de detalhes
- │    ├── ProductForm.js  # Formulário de cadastro de novos itens
- │    └── ProductList.js  # Lógica de busca na API e mapeamento da lista
- └── App.js               # Gestão de estados globais, navegação e estilo teal
-🔧 Como rodar o projeto
-Para clonar e rodar esta aplicação em sua máquina, você precisará do Git e Node.js instalados.
+Uma seção exclusiva para adicionar novos itens. Ao preencher o formulário, a nova arte é injetada instantaneamente no topo da galeria através do gerenciamento de estado (useState).
 
-Bash
+📂 Organização do Código:
 
-# Clone este repositório
-$ git clone https://github.com/seu-usuario/mini-loja-virtual
+App.js: O controlador de navegação e estilos globais (Teal Theme).
 
-# Acesse a pasta do projeto
-$ cd mini-loja-virtual
+Storefront.js: A visão principal de exposição das artes.
 
-# Instale as dependências
-$ npm install
+ProductList.js: Onde ocorre a "mágica" da API e o mapeamento dos itens.
 
-# Execute a aplicação
-$ npm start
-💡 Aprendizados
-Durante o desenvolvimento deste projeto, pude aprofundar meus conhecimentos em:
+ProductCard.js: Componente individual de exibição e lógica do modal.
 
-Hooks do React: Especialmente useState para dados dinâmicos e useEffect para controle de ciclos de vida.
+ProductForm.js: Interface de cadastro de novos produtos.
 
-Props: Passagem de funções e dados entre componentes pais e filhos.
+🚀 Como Iniciar:
 
-Tratamento de Dados: Como transformar dados brutos de uma API para que se encaixem no tema e na necessidade do meu negócio (Nicho de Arte).
+Clone o projeto: git clone https://github.com/seu-usuario/projeto.git
 
-🎨 Inspiração do Tema
-Escolhi o tema de Aquarela e a cor Teal para transmitir uma sensação de calma, criatividade e sofisticação, fugindo dos layouts de e-commerce tradicionais.
+Instale as dependências: npm install
+
+Rode a aplicação: npm start
+
+💡 Aprendizados Adquiridos:
+
+Neste projeto, pude consolidar conceitos fundamentais de desenvolvimento:
+
+Hooks: useState para dados voláteis e useEffect para requisições assíncronas.
+
+Props: Comunicação eficiente entre componentes.
+
+Personalização: Adaptação de uma API genérica para um nicho específico (Artes).
+
+UX/UI: Uso de cores harmônicas e feedbacks visuais para o usuário.
+
+Desenvolvido com ☕ e código durante as aulas de Desenvolvimento Web.
