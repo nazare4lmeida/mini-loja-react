@@ -1,10 +1,12 @@
 🎨 Galeria Ateliê Teal | Mini Loja Virtual
 Status do Projeto: 🚀 Concluído (Aula de Desenvolvimento Web Fullstack)
 
-📖 Descrição
+📖 Descrição:
+
 Este projeto é uma aplicação React moderna que simula uma galeria de arte online. O objetivo foi criar uma experiência fluida para o usuário, integrando o consumo de uma API externa com a funcionalidade de gerenciamento de inventário em tempo real.
 
-🛠️ Tecnologias e Ferramentas
+🛠️ Tecnologias e Ferramentas:
+
 React JS: Biblioteca base para a construção da interface.
 
 PrimeReact: Componentes profissionais (Cards, Diálogos, Botões).
@@ -15,17 +17,22 @@ Axios: Cliente HTTP para busca de dados na Fake Store API.
 
 Unsplash API: Utilizada para as imagens artísticas de alta qualidade.
 
-🌟 Funcionalidades Principais
+🌟 Funcionalidades Principais:
+
 🛒 Vitrine Interativa
+
 Uma página inicial elegante onde o cliente pode explorar as obras. Cada item possui um efeito de sombra ao passar o mouse.
 
 🔍 Detalhes do Produto
+
 Ao clicar em "Ver Detalhes", um componente Dialog (modal) é disparado, exibindo a descrição técnica da obra e uma imagem ampliada sem recarregar a página.
 
 📝 Cadastro de Acervo
+
 Uma seção exclusiva para adicionar novos itens. Ao preencher o formulário, a nova arte é injetada instantaneamente no topo da galeria através do gerenciamento de estado (useState).
 
-📂 Organização do Código
+📂 Organização do Código:
+
 App.js: O controlador de navegação e estilos globais (Teal Theme).
 
 Storefront.js: A visão principal de exposição das artes.
@@ -36,14 +43,16 @@ ProductCard.js: Componente individual de exibição e lógica do modal.
 
 ProductForm.js: Interface de cadastro de novos produtos.
 
-🚀 Como Iniciar
+🚀 Como Iniciar:
+
 Clone o projeto: git clone https://github.com/seu-usuario/projeto.git
 
 Instale as dependências: npm install
 
 Rode a aplicação: npm start
 
-💡 Aprendizados Adquiridos
+💡 Aprendizados Adquiridos:
+
 Neste projeto, pude consolidar conceitos fundamentais de desenvolvimento:
 
 Hooks: useState para dados voláteis e useEffect para requisições assíncronas.
