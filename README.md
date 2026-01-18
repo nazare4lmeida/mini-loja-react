@@ -1,7 +1,3 @@
-Entendido! Vamos fazer um README que seja o orgulho de qualquer portfólio. Vou usar ícones, divisórias visuais e uma estrutura bem organizada que funciona bem tanto no GitHub quanto no Dontpad (pois a estrutura de Markdown é universal).
-
-Aqui está a versão "Premium" para seus alunos:
-
 🎨 Galeria Ateliê Teal | Mini Loja Virtual
 Status do Projeto: 🚀 Concluído (Aula de Desenvolvimento Web Fullstack)
 
